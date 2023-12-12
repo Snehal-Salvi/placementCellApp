@@ -1,0 +1,36 @@
+<!-- interview-schedule form -->
+<div class="layout-container">
+    <form action="/scheduledInterviewList" method="post" class="mt-4">
+        <h1 class="form-heading">Scheduled Interview</h1>
+
+        <div class="form-group">
+            <label for="studentName">Student Name:</label>
+            <select id="studentName" name="studentName" class="form-control" required>
+                <option value="">Select Student</option>
+                <% students.forEach(student => { %>
+                    <option value="<%= student.name %>"><%= student.name %></option>
+                <% }); %>
+            </select>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label for="companyName">Company Name:</label>
+            <input type="text" id="companyName" name="companyName" class="form-control" required>
+        </div>
+
+        <hr>
+
+        <div class="form-group">
+            <label for="interviewDate">Interview Date:</label>
+            <input type="date" id="interviewDate" name="interviewDate" class="form-control" required>
+        </div>
+
+        <hr>
+
+        <div class="text-center">
+            <button type="submit" class="btn btn-success">Submit</button>
+        </div>
+    </form>
+</div>

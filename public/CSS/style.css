@@ -1,0 +1,142 @@
+:root{
+    --text-font:fangsong;
+}
+
+body{
+    font-family: var(--text-font);
+    background-color: #e3dfda;
+}
+
+.custom-navbar{
+    background-color: #121212;
+    font-family: var(--text-font);
+    font-size: 20px;   
+}
+
+.main-container{
+    position: relative;
+}
+
+.main-container img {
+    height: 90vh;
+    width: 100vw;
+    filter: blur(2px); 
+}
+
+.text-overlay{
+    position: absolute; 
+    top: 15%; 
+    color: rgb(2 7 18); 
+    text-align: center; 
+    font-size: 50px; 
+    font-weight: bold;
+    font-family: var(--text-font);
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: rgba(255, 255, 255, 0.7); 
+    padding: 10px;
+}
+
+.buttons{
+    position: absolute; 
+    top: 55%; 
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    text-align: center; 
+}
+
+.custom-btn {
+    background-color: #0c0a0b;
+    color: white;
+    font-family: var(--text-font);
+    font-size: 30px;
+    border: none;
+    margin: 5px;
+    box-shadow:  0px 0px 6px 0px white;
+}
+
+.custom-btn:hover {
+    background-color: #2d2629;
+}
+
+.container{
+    text-align: center;
+}
+
+img{
+    width: 50px;
+}
+
+.table-border {
+    border: 1px solid rgb(65 65 115);
+    border-collapse: collapse;
+}
+
+.table-border th,
+.table-border td {
+    border-left: 1px solid  rgb(65 65 115);
+    border-right: 1px solid  rgb(65 65 115);
+}
+
+.layout-container {
+    width: 50vw;
+    height: fit-content;
+    background-color: #dfdfdf;
+    margin: 20px auto;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 4px black;
+    padding: 20px;    
+}
+
+.form-heading {
+    font-family: var(--text-font);
+    font-weight: 900;
+    font-size: 50px; 
+    text-align: center;
+}
+
+.login-container{
+    width: 50vw;
+    height: fit-content;
+    background-color: #000000;
+    margin: 20px auto;
+    border: 5px solid black;
+    border-radius: 5px;
+    box-shadow: 0px 0px 6px 4px white;
+    padding: 20px; 
+    text-align: center; 
+    color: white;
+    font-family: var(--text-font);
+}
+
+.margin {
+    margin-top: 20px; 
+    margin-bottom: 20px;
+  }
+
+  .login-button{
+    background-color: white;
+    width: 250px;
+    color: black;
+    font-weight: bolder;
+  }
+
+  .login-button:hover{
+    background-color: rgb(21, 21, 222);
+  }
+
+
+@media (max-width: 1200px) {
+    .main-container img {
+        height: 90vh;
+        max-width: 100%;
+    }
+
+    .buttons{
+        top: 80%; 
+    }
+
+    .custom-btn {
+        font-size: 20px;
+    }
+} 

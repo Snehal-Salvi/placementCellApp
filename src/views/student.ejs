@@ -1,0 +1,87 @@
+<!-- Student List view -->
+<div class="container">
+    
+    <div class="mt-5 mb-4 d-flex justify-content-between align-items-center">
+        <h1 class="header">Students List</h1>
+        <button type="button" class="btn btn-primary" onclick="location.href='/addStudent'">
+            <i class="fas fa-plus"></i> Add Student
+        </button>
+    </div>
+
+    <table class="table table-dark table-border">
+        <thead>
+            <tr>
+                <th scope="col" rowspan="2">Sr No</th>
+                <th scope="col" rowspan="2">Batch</th>
+                <th scope="col" rowspan="2">Name</th>
+                <th scope="col" rowspan="2">Email</th>
+                <th scope="col" rowspan="2">Contact No</th>
+                <th scope="col" rowspan="2">College Name</th>
+                <th scope="colgroup" colspan="3">Score</th>
+                <th scope="colgroup" colspan="3">Interview</th>
+                <th scope="col" rowspan="2">Status</th>
+                <th scope="col" colspan="2" rowspan="2">Actions
+        
+                </th>
+            </tr>
+            <tr>
+             
+                <th>DSA</th>
+                <th>WebD</th>
+                <th>React</th>
+                <th>Company Name</th>
+                <th>Date</th>
+                <th>Result</th>
+                
+            </tr>
+        </thead>
+        <tbody>
+            <% students.forEach((student, index) => { %>
+                <tr>
+                    <th scope="row"><%= index + 1 %></th>
+                    <td><%= student.batch %></td>
+                    <td><%= student.name %></td>
+                    <td><%= student.email %></td>
+                    <td><%= student.contactNo %></td>
+                    <td><%= student.college %></td>
+                    <td><%= student.score.dsa %></td>
+                    <td><%= student.score.webD %></td>
+                    <td><%= student.score.react %></td>
+                   
+                        <td>
+                            <% if (student.interviews && student.interviews.length > 0) { %>
+                                <%= student.interviews[0].companyName ? student.interviews[0].companyName : 'N/A' %>
+                            <% } else { %>
+                                <a href="/scheduledInterview">Scheduled Interview</a>
+                            <% } %>
+                        </td>
+                        <td>
+                            <% if (student.interviews && student.interviews.length > 0) { %>
+                                <%= student.interviews[0].interviewDate ? student.interviews[0].interviewDate.toLocaleDateString('en-GB', { day: '2-digit', month: '2-digit', year: 'numeric' }) : 'N/A' %>
+                            <% } else { %>
+                                N/A
+                            <% } %>
+                        </td>
+                        <td>
+                            <% if (student.interviews && student.interviews.length > 0) { %>
+                                <%= student.interviews[0].result ? student.interviews[0].result : 'N/A' %>
+                            <% } else { %>
+                                N/A
+                            <% } %>
+                        </td>
+                      <td>
+                       <%= student.status %>
+                      </td>
+                    <td>
+                        <a href="/updateStudent/<%= student.id %>" class="btn btn-warning">Update</a>
+                        <td>
+                        <a href="/deleteStudent/<%= student.id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                    </td>
+                 
+                   
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+</div>
