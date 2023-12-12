@@ -42,7 +42,7 @@ A comprehensive platform for Team Career Camp to maintain a database of all the 
 - http://localhost:8800
 
 ## Deployment Link
--
+- https://placementcellapp-dvfo.onrender.com
 
 ## Technlogies Used
 
