@@ -31,7 +31,7 @@ A comprehensive platform for Team Career Camp to maintain a database of all the 
 ## Project Setup
 
 ### 1. Clone the Repository
-- 
+- https://github.com/Snehal-Salvi/placementCellApp
 ### 2. Install Dependencies
 -  npm install
 ### 3. Set environment variables
